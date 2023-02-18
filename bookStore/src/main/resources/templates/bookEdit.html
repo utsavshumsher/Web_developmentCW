@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <title>Utsav Book Store</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<style>
+    /* Background color and font */
+    body {
+        background: linear-gradient(to right, cornflowerblue, white);
+        font-family: Arial, sans-serif;
+    }
+
+
+
+    /* Navbar style */
+    .navbar {
+        background-color: black;
+        color: #fff;
+    }
+
+    .nav-link {
+        color: #fff;
+    }
+
+    .navbar-brand {
+        font-weight: bold;
+        font-size: 1.5rem;
+    }
+
+    .navbar-nav {
+        margin-right: 1rem;
+    }
+
+    .navbar-nav li {
+        margin-left: 1rem;
+    }
+
+    /* Sidebar style */
+    .sidebar {
+        /*background-color: #fff;*/
+        height: 100vh;
+        border-right: 1px solid #e9ecef;
+        padding: 1rem;
+    }
+
+    .sidebar h3 {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+        color: #1e90ff;
+    }
+
+    .sidebar ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    .sidebar li {
+        list-style: none;
+    }
+
+    .sidebar a {
+        color: #000;
+        text-decoration: none;
+        display: block;
+        padding: 0.5rem 1rem;
+    }
+
+    .sidebar a:hover {
+        background-color: #e9ecef;
+    }
+
+
+    .main-content h1 {
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+        color: #1e90ff;
+    }
+
+    .main-content p {
+        font-size: 1.2rem;
+        line-height: 1.5;
+        margin-bottom: 1rem;
+        color: #000;
+    }
+
+    /* Button style */
+    .btn {
+        background-color: #1e90ff;
+        color: #fff;
+        border: none;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .btn:hover {
+        background-color: #4e94d4;
+    }
+    table{
+        background-color: white;
+    }
+
+    div.second {
+        /*background-color: lightskyblue;*/
+        height: 200px;
+        margin-top: 100px;
+    }
+
+
+</style>
+
+<body>
+<nav class=" first navbar navbar-expand-lg ">
+    <a class="navbar-brand" href="#"><h3>Utsav Book Store</h3></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="login">Logout</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="register">Register</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-3 sidebar">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="available_books">Available Books</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="my_books">My Books</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="book_register">New Book Register</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class=" second col-md-9">
+            <div classname="container my-5 p-5" style="border:1px solid black">
+                <h4 class="text-center">Edit Book Here</h4>
+                <form class="col-md-4 offset-md-4" th:action="@{/save}" method="post" th:object="${book}">
+                    <input type="hidden" name="id" th:value="${book.id}"/>
+                    <div class="mb-3">
+                        <label  class="form-label">Name</label>
+                        <input type="text"  class="form-control" name="name" th:value="${book.name}">
+                    </div>
+                    <div class="mb-3">
+                        <label  class="form-label">Author</label>
+                        <input type="text"  class="form-control" name="author" th:value="${book.author}">
+                    </div>
+                    <div class="mb-3">
+                        <label  class="form-label">Price</label>
+                        <input type="text"  class="form-control" name="price" th:value="${book.price}">
+                    </div>
+                    <center> <button type="submit" class="btn btn-primary">Submit</button></center>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>
+

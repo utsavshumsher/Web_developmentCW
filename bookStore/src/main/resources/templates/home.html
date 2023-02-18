@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Utsav Book Store</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<style>
+    body {
+        background: linear-gradient(to right, cornflowerblue, white);
+        font-family: Arial, sans-serif;
+    }
+
+    /* Navbar style */
+    .navbar {
+        background-color: black;
+        color: #fff;
+    }
+
+    .nav-link {
+        color: #fff;
+    }
+
+    .navbar-brand {
+        font-weight: bold;
+        font-size: 1.5rem;
+        color: white;
+    }
+
+    .navbar-nav {
+        margin-right: 1rem;
+    }
+
+    .navbar-nav li {
+        margin-left: 1rem;
+    }
+
+    /* Sidebar style */
+    .sidebar {
+        /*background-color: #fff;*/
+        height: 100vh;
+        border-right: 1px solid #e9ecef;
+        padding: 1rem;
+    }
+
+    .sidebar h3 {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+        color: #1e90ff;
+    }
+
+    .sidebar ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    .sidebar li {
+        list-style: none;
+    }
+
+    .sidebar a {
+        color: #000;
+        text-decoration: none;
+        display: block;
+        padding: 0.5rem 1rem;
+    }
+
+    .sidebar a:hover {
+        background-color: cornflowerblue;
+    }
+
+    .container-fluid{
+        height: 100px;
+        margin-bottom: 200px;
+    }
+
+
+
+    .main-content h1 {
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 100px;
+        color: #1e90ff;
+        height: 20px;
+        margin-top: 200px;
+    }
+
+    .main-content p {
+        font-size: 1.2rem;
+        line-height: 1.5;
+        /*margin-bottom: 10px;*/
+        color: #000;
+    }
+
+
+    table{
+        background-color: white;
+    }
+
+</style>
+<body>
+<nav class="navbar navbar-expand-lg ">
+    <a class="navbar-brand" href="/"><h3>Utsav Book Store</h3></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="login">Logout</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="register">Register</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-3 sidebar">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="available_books">Available Books</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="my_books">My Books</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="book_register">New Book Register</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-9 main-content mx-auto">
+            <center><h1>Welcome to Utsav Book Store</h1></center>
+            <center><p>We offer a wide range of books from all genres. Whether you're looking for a gripping mystery, a heartwarming romance, or a thought-provoking non-fiction book, you'll find it here.</p>
+            <p>Our selection is constantly updated with new releases and bestsellers, and we also offer a range of secondhand books for those on a budget. Plus, if you're a regular customer, you can sign up for our loyalty program and earn points with every purchase.</p>
+            </center>
+        </div>
+
+
+
+
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>
+
