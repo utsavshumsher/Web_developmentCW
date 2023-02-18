@@ -11,16 +11,30 @@
     body {
         background: linear-gradient(to right, cornflowerblue, white);
         font-family: Arial, sans-serif;
+
+
+
     }
+
+    .navbar-toggler-icon {
+        color: white;
+
+    }
+
+    .navbar-toggler-icon > .navbar-toggler-bar {
+        background-color: black; /* Change this to the color you want */
+    }
+
+
 
     /* Navbar style */
     .navbar {
+        color: cornflowerblue;
         background-color: black;
-        color: #fff;
     }
 
     .nav-link {
-        color: #fff;
+        color: white;
     }
 
     .navbar-brand {
@@ -39,10 +53,12 @@
 
     /* Sidebar style */
     .sidebar {
-        /*background-color: #fff;*/
+
         height: 100vh;
         border-right: 1px solid #e9ecef;
         padding: 1rem;
+        /*color: white;*/
+
     }
 
     .sidebar h3 {
@@ -62,14 +78,14 @@
     }
 
     .sidebar a {
-        color: #000;
+        color: white;
         text-decoration: none;
         display: block;
         padding: 0.5rem 1rem;
     }
 
     .sidebar a:hover {
-        background-color: cornflowerblue;
+        background-color:cornflowerblue;
     }
 
     .container-fluid{
@@ -105,7 +121,11 @@
 <nav class="navbar navbar-expand-lg ">
     <a class="navbar-brand" href="/"><h3>Utsav Book Store</h3></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+        <span class="navbar-toggler-icon">
+            <span class="navbar-toggler-bar"></span>
+            <span class="navbar-toggler-bar"></span>
+            <span class="navbar-toggler-bar"></span>
+        </span>
     </button>
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav">
