@@ -68,13 +68,14 @@
         </div>
         <div th:if="${error}" class="error" th:text="${error}"></div>
         <button type="submit" class="btn btn-primary">Register</button>
+        <div style="text-align: center; margin-top: 20px;">
+            <p>Already have an account? </p>
+            <a th:href="@{/login}" style="color: #007bff; text-decoration: none;">
+                <strong>Login</strong>
+            </a>
+        </div>
     </form>
-    <div style="text-align: center; margin-top: 20px;">
-        <p>Already have an account? </p>
-        <a th:href="@{/login}" style="color: #007bff; text-decoration: none;">
-            <strong>Login</strong>
-        </a>
-    </div>
+
 </div>
 </body>
 </html>
